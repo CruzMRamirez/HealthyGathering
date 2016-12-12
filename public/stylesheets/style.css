@@ -1,7 +1,64 @@
-
-
-content
+body{
+  padding-top:6.3em;
+}
+a
 {
-  height: 300px;
-  background-color:red;
+  color: #00B7FF;
+
+}
+.wrapper
+{
+  float:left;
+  max-width: 100%;
+  padding:10px;
+  background-color: green;
+}
+.jumbotron
+{
+  background-color: gray;
+  height: 25%;
+  margin-bottom: 0px;
+}
+.slideWrapper
+{
+  background-color: silver;
+  padding: 5%;
+}
+.aboutproduct
+{
+  background-color: yellow;
+  padding: 5%;
+}
+.store
+{
+  min-height: 15em;
+  background-color: blue;
+  padding: 5%;
+  margin: 1em;
+  border-width: 2px;
+  border-color: black;
+}
+.row
+{
+  margin:0;
+  max-width: 100%;
+}
+.inputdiv
+{
+  float:left;
+  width:75%;
+}
+input
+{
+  width:100%;
+  font-size:16pt;
+  padding:5px;
+  margin-top:2.3%;
+  margin-left: 8%;
+}
+footer
+{
+  background-color: black;
+  color: white;
+  padding:1em;
 }
