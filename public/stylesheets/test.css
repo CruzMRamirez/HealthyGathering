@@ -1,0 +1,14 @@
+body, html {height: 100%;}
+
+#panel {
+    padding: 5px;
+    text-align: center;
+    background-color: gray;
+    border: solid 1px gray;
+    padding-top: 50px;
+    float: left;
+    height:100%;
+    width:25%;
+    display: none;
+
+}
