@@ -1,5 +1,27 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .jumbotron
+    h1= title
+    p Welcome to #{title}
+  .row
+    .slideWrapper.col-md-6.col-xs-12
+      h2 To be included at a later time
+    .aboutproduct.col-md-6.col-xs-12
+      h2 Description
+  .row-eq-height
+      .col-xs-4
+        .store
+          p  store 1
+        .store
+          p store 1
+      .col-xs-4
+        .store
+          p store 2
+        .store
+          p store 2
+      .col-xs-4
+        .store
+          p store 3
+        .store
+          p store 3

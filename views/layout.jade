@@ -2,6 +2,28 @@ doctype html
 html
   head
     title= title
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
     link(rel='stylesheet', href='/stylesheets/style.css')
+  script
+    $(document).ready(function(){$("#options").click(function(){$("#panel").animate({width:'toggle'},1000);$(".wrapper").toggleClass("wrappertoggle");});});
+ 
   body
-    block content
+    nav.navbar.navbar-inverse.navbar-fixed-top(style="background-color:pink;")
+      button.btn.btn-lg(id="options", style="background-color:red; float: left;")
+        h2
+          span.glyphicon.glyphicon-menu-hamburger
+      .inputdiv
+        form
+          input(type="text" name="productsearch") 
+      button.btn.btn-lg(style="background-color:red; float:right;")
+        h2
+          span.glyphicon.glyphicon-search
+    div(id="panel")
+      p hello world this is my test
+    .wrapper
+      block content
+    footer.navbar-fixed-bottom
+        p
+        | &copy; 2016 |
+        
