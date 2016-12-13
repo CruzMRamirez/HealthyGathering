@@ -1,5 +1,5 @@
 body{
-  padding-top:6.3em;
+  padding-top:6%;
   background-color: green;
 }
 body, html{
@@ -36,7 +36,10 @@ a
     width:25%;
     display: none;
 }
-
+section
+{
+  background-color: orange;
+}
 .wrappertoggle
 {
   width: 75%;
@@ -50,6 +53,7 @@ a
 {
   background-color: gray;
   height: 30%;
+  padding: 10px;
 }
 .slideWrapper
 {
@@ -82,11 +86,15 @@ a
 }
 input
 {
-  width:100%;
+
+  max-width:15%;
+  margin:auto;
+  margin-top:1%;
+}
+.bigsearchbar
+{
   font-size:16pt;
-  padding:5px;
-  margin-top:2.3%;
-  margin-left: 8%;
+  max-width: 80%
 }
 footer
 {
