@@ -27,10 +27,9 @@ a
 #panel {
     padding: 5px;
     padding-top: 10%;
-    text-align: center;
+    text-align: left;
     background-color: gray;
     border: solid 1px gray;
-    padding-top: 50px;
     float: left;
     height:100%;
     width:25%;
@@ -93,4 +92,24 @@ footer
   background-color: black;
   color: white;
   padding:1em;
+}
+.pannelLink
+{
+  font-size: 28px;
+  color: black;
+}
+.homeLink
+{
+  font-size: 38px;
+  color: black;
+}
+a.pannelLink:hover
+{
+  font-size: 32px;
+  color: blue;
+}
+a.homeLink:hover
+{
+  font-size: 42px;
+  color: blue;
 }
