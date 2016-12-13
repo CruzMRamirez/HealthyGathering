@@ -1,23 +1,55 @@
 body{
   padding-top:6.3em;
+  background-color: green;
+}
+body, html{
+  height:100%;
 }
 a
 {
   color: #00B7FF;
 
 }
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
 .wrapper
 {
   float:left;
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
   padding:10px;
   background-color: green;
+  transition: 2.4s;
 }
+#panel {
+    padding: 5px;
+    padding-top: 10%;
+    text-align: left;
+    background-color: gray;
+    border: solid 1px gray;
+    float: left;
+    height:100%;
+    width:25%;
+    display: none;
+}
+
+.wrappertoggle
+{
+  width: 75%;
+  height: 100%;
+  float: right;
+  transition:1s;
+}
+
+
 .jumbotron
 {
   background-color: gray;
-  height: 25%;
-  margin-bottom: 0px;
+  height: 30%;
 }
 .slideWrapper
 {
@@ -61,4 +93,24 @@ footer
   background-color: black;
   color: white;
   padding:1em;
+}
+.pannelLink
+{
+  font-size: 28px;
+  color: black;
+}
+.homeLink
+{
+  font-size: 38px;
+  color: black;
+}
+a.pannelLink:hover
+{
+  font-size: 32px;
+  color: blue;
+}
+a.homeLink:hover
+{
+  font-size: 42px;
+  color: blue;
 }
