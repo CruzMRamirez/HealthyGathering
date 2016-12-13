@@ -1,5 +1,6 @@
 body{
   padding-top:6.3em;
+  background-color: green;
 }
 a
 {
@@ -8,15 +9,37 @@ a
 .wrapper
 {
   float:left;
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
   padding:10px;
   background-color: green;
+  transition: 2.4s;
 }
+#panel {
+    padding: 5px;
+    text-align: center;
+    background-color: gray;
+    border: solid 1px gray;
+    padding-top: 50px;
+    float: left;
+    height:100%;
+    width:25%;
+    display: none;
+}
+
+.wrappertoggle
+{
+  width: 75%;
+  height: 100%;
+  float: right;
+  transition:1s;
+}
+
+
 .jumbotron
 {
   background-color: gray;
   height: 25%;
-  margin-bottom: 0px;
 }
 .slideWrapper
 {
