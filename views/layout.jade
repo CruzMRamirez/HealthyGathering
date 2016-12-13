@@ -9,14 +9,14 @@ html
   script
     $(document).ready(function(){$("#options").click(function(){$("#panel").animate({width:'toggle'},1000);});});    
   body
-    nav.navbar.navbar-inverse.navbar-fixed-top(style="background-color:pink;")
-      button.btn.btn-lg(id="options", style="background-color:red; float: left;")
+    nav.navbar.navbar-inverse.navbar-fixed-top(style="background-color:#80FFFF;")
+      button.btn.btn-lg(id="options", style="background-color:#FFC400; float: left;")
         h2
           span.glyphicon.glyphicon-menu-hamburger
       .inputdiv
         form
           input(type="text" name="productsearch") 
-      button.btn.btn-lg(style="background-color:red; float:right;")
+      button.btn.btn-lg(style="background-color:#FFC400; float:right;")
         h2
           span.glyphicon.glyphicon-search
     div(id="panel")
@@ -27,4 +27,3 @@ html
         p
         | &copy; 2016 |
         
-
