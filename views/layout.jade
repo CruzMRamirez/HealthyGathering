@@ -5,9 +5,9 @@ html
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
     link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/test.css')
   script
-    $(document).ready(function(){$("#options").click(function(){$("#panel").animate({width:'toggle'},1000);});});    
+    $(document).ready(function(){$("#options").click(function(){$("#panel").animate({width:'toggle'},1000);$(".wrapper").toggleClass("wrappertoggle");});});
+ 
   body
     nav.navbar.navbar-inverse.navbar-fixed-top(style="background-color:pink;")
       button.btn.btn-lg(id="options", style="background-color:red; float: left;")
@@ -20,7 +20,19 @@ html
         h2
           span.glyphicon.glyphicon-search
     div(id="panel")
-      p hello world this is my test
+      ul(style="list-style-type:none")
+        li
+          a.homeLink(href="/") Home
+        li
+          a.pannelLink(href="/profile") Profile
+        li
+          a.pannelLink(href="/list") List
+        li
+          a.pannelLink(href="/preferences") Preferences
+        li
+          a.pannelLink(href="/contact") Contact
+        li
+          a.pannelLink(href="/about") About
     .wrapper
       block content
     footer.navbar-fixed-bottom

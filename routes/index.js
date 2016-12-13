@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'index' });
 });
 
 router.get('/test', function(req, res, next) {
@@ -15,23 +15,23 @@ router.get('/about', function(req, res, next) {
 });
 
 router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Express' });
+  res.render('contact', { title: 'contact' });
 });
 
 router.get('/list', function(req, res, next) {
-  res.render('list', { title: 'Express' });
+  res.render('list', { title: 'list' });
 });
 
 router.get('/preferences', function(req, res, next) {
-  res.render('preferences', { title: 'Express' });
+  res.render('preferences', { title: 'preferences' });
 });
 
 router.get('/profile', function(req, res, next) {
-  res.render('profile', { title: 'Express' });
+  res.render('profile', { title: 'profile' });
 });
 
 router.get('/search', function(req, res, next) {
-  res.render('search', { title: 'Express' });
+  res.render('search', { title: 'search' });
 });
 
 module.exports = router;
