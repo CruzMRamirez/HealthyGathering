@@ -2,9 +2,18 @@ body{
   padding-top:6.3em;
   background-color: green;
 }
+body, html{
+  height:100%;
+}
 a
 {
   color: #00B7FF;
+}
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
 }
 .wrapper
 {
@@ -17,6 +26,7 @@ a
 }
 #panel {
     padding: 5px;
+    padding-top: 10%;
     text-align: center;
     background-color: gray;
     border: solid 1px gray;
@@ -39,7 +49,7 @@ a
 .jumbotron
 {
   background-color: gray;
-  height: 25%;
+  height: 30%;
 }
 .slideWrapper
 {
