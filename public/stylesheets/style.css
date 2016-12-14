@@ -68,7 +68,7 @@ section
 .store
 {
   min-height: 15em;
-  background-color: blue;
+  background-color: #A286FF;
   padding: 5%;
   margin: 1em;
   border-width: 2px;
@@ -79,6 +79,46 @@ section
   margin:0;
   max-width: 100%;
 }
+
+.pic1
+{
+  background-color:purple;
+  width:15%;
+  height:25%;
+  border-radius: 5%;
+  border-style: solid;
+
+}
+
+.pic2
+{
+  background-color:purple;
+  width:15%;
+  height:25%;
+  border-radius: 5%;
+  border-style: solid;
+
+}
+
+.information
+{
+  background-color: red;
+  width:50%;
+  height:10%;
+  margin:auto;
+  text-align: center;
+}
+
+table,tr,th,td
+{
+  border-width:1px;
+  border-color:black;
+  border-style: solid;
+  padding:2%;
+}
+
+
+
 .inputdiv
 {
   float:left;
