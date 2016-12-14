@@ -1,8 +1,9 @@
 extends layout
 
 block content
+
   .col-md-6
-  .col-md-3(style="border-color:black; border-style: solid; border-width:2px; background-color:silver; padding:10px")
+  .col-md-3(style="border-color:black; border-style: solid; opacity: 0.9; border-width:2px; background-color:silver; padding:10px")
     h2 Log In
     form(style="width:100em;")
       label(for="UserName") UserName: 
@@ -10,7 +11,6 @@ block content
       br
       label(for="Password") Password: 
       input.loginput(type="text", id="Password", name="Password")
-      br
       br
       button.btn.btn-md(type="submit") Submit
     hr(style="border-color:black;")
@@ -24,6 +24,5 @@ block content
       br
       label(for="Email") Email : 
       input.loginput(type="text", id="Email", name="Email")
-      br
       br
       button.btn.btn-md(type="submit") Submit

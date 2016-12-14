@@ -103,8 +103,15 @@ router.get('/', function(req, res, next) {
   res.render('index', { items: {} });
 });
 
+// router.get('/test', function(req, res, next) {
+//   res.render('test', { items: {} });
+// });
+
 router.get('/test', function(req, res, next) {
-  res.render('test', { items: {} });
+  UserData.find()
+  .then(function(doc){
+    res.render('test', {items: doc});
+  });
 });
 
 router.get('/about', function(req, res, next) {
