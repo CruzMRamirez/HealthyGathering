@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  .col-md-6
+  .col-md-3(style="border-color:black; border-style: solid; border-width:2px; background-color:silver; padding:10px")
+    h2 Log In
+    form(style="width:100em;")
+      label(for="UserName") UserName: 
+      input.loginput(type="text", id="UserName", name="UserName")
+      br
+      label(for="Password") Password: 
+      input.loginput(type="text", id="Password", name="Password")
+      br
+      br
+      button.btn.btn-md(type="submit") Submit
+    hr(style="border-color:black;")
+    h2 Register
+    form(style="width:100em;")
+      label(for="UserName") UserName: 
+      input.loginput(type="text", id="UserName", name="UserName")
+      br
+      label(for="Password") Password: 
+      input.loginput(type="text", id="Password", name="Password")
+      br
+      label(for="Email") Email : 
+      input.loginput(type="text", id="Email", name="Email")
+      br
+      br
+      button.btn.btn-md(type="submit") Submit

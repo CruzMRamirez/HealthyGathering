@@ -9,20 +9,51 @@ html
     $(document).ready(function(){$("#options").click(function(){$("#panel").animate({width:'toggle'},1000);$(".wrapper").toggleClass("wrappertoggle");});});
  
   body
-    nav.navbar.navbar-inverse.navbar-fixed-top(style="background-color:pink;")
-      button.btn.btn-lg(id="options", style="background-color:red; float: left;")
-        h2
-          span.glyphicon.glyphicon-menu-hamburger
-      .inputdiv
-        form
-          input(type="text" name="productsearch") 
-      button.btn.btn-lg(style="background-color:red; float:right;")
-        h2
-          span.glyphicon.glyphicon-search
+     #nav.navbar.navbar-default.navbar-fixed-top
+       .container
+         .navbar-header
+           button.navbar-toggle.collapsed(style="float:right;" type='button',id="options", data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+             span.sr-only Toggle navigation
+             span.icon-bar
+             span.icon-bar
+             span.icon-bar
+           a.navbar-brand(href='/') Healthy Gathering
+         .navbar-toggle(style="margin:auto; border-color:transparent; float:left;")
+             form
+               input.bigsearchbar(type="text" name="search")
+               input(type="submit" value="Go")
+         #navbar.navbar-collapse.collapse
+           ul.nav.navbar-nav
+             li(class=(title == 'About') ? 'active' : null)
+               a(href='/about') About
+             li(class=(title == 'list') ? 'active' : null)
+               a(href='/list') List
+             li(class=(title == 'contact') ? 'active' : null)
+               a(href='/contact') contact
+           ul.nav.navbar-nav.navbar-right(style="float:left;")
+             if user
+               li.dropdown
+                 a.navbar-avatar.dropdown-toggle(href='#', data-toggle='dropdown')
+                   span #{user.name || user.email} &nbsp;
+                   i.caret
+                 ul.dropdown-menu
+                   li
+                     a(href='/profile') Profile
+                   li.divider(role='separator')
+                   li
+                     a(href='/logout') Logout
+             else
+               li(class=(title == 'Log in') ? 'active' : null)
+                 a(href='/login') Log-in
+               li(class=(title == 'Register') ? 'active' : null)
+                 a(href='/login') Register
+           form
+             input(type="text" name="productsearch")
+             input(type="submit" value="Search")
     div(id="panel")
       ul(style="list-style-type:none")
         li
-          a.homeLink(href="/") Home
+          a.homeLink(href="/" data-transition="slide") Home
         li
           a.pannelLink(href="/profile") Profile
         li
@@ -39,4 +70,3 @@ html
         p
         | &copy; 2016 |
         
-
