@@ -24,12 +24,8 @@ html
                input(type="submit" value="Go")
          #navbar.navbar-collapse.collapse
            ul.nav.navbar-nav
-             li(class=(title == 'About') ? 'active' : null)
-               a(href='/about') About
              li(class=(title == 'list') ? 'active' : null)
-               a(href='/list') List
-             li(class=(title == 'contact') ? 'active' : null)
-               a(href='/contact') contact
+               a(href='/list') My List
            ul.nav.navbar-nav.navbar-right(style="float:left;")
              if user
                li.dropdown
@@ -67,6 +63,6 @@ html
     .wrapper
       block content
     footer.navbar-fixed-bottom
-        p
-        | &copy; 2016 |
-        
+        a.pannelLink(style="font-size:16px;", href='/about') About | 
+        a.pannelLink(style="font-size:16px;", href='/contact') Contact | 
+        | &copy; 2016 
