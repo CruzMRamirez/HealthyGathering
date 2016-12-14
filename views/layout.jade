@@ -20,12 +20,10 @@ html
            a.navbar-brand(href='/') Healthy Gathering
          .navbar-toggle(style="margin:auto; border-color:transparent; float:left;")
              form
-               input.bigsearchbar(type="text" name="productsearch")
+               input.bigsearchbar(type="text" name="search")
                input(type="submit" value="Go")
          #navbar.navbar-collapse.collapse
            ul.nav.navbar-nav
-             li(class=(title == 'Home') ? 'active' : null)
-               a(href='/') Home
              li(class=(title == 'About') ? 'active' : null)
                a(href='/about') About
              li(class=(title == 'list') ? 'active' : null)
