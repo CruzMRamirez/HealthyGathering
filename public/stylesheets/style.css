@@ -1,6 +1,7 @@
 body{
   padding-top:6%;
   background-color:white;
+  font-family: "Times New Roman", Times, serif;
 }
 body, html{
   height:100%;
@@ -52,18 +53,24 @@ section
 .jumbotron
 {
   background-color: #400099;
-  height: 30%;
+  height: 40%;
   padding: 10px;
+  background-image: url(http://www.agricorner.com/wp-content/uploads/2013/07/Fruit-and-Vegetables1.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
 }
 .slideWrapper
 {
-  background-color: #FFE500;
-  padding: 5%;
+  text-align: center;
+  /*background-color: #FFE500;*/
+  /*padding: 5%;*/
 }
 .aboutproduct
 {
-  background-color:#FFE500;
-  padding: 5%;
+  text-align: center;
+  /*background-color:#FFE500;
+  padding: 5%;*/
 }
 .store
 {
@@ -73,6 +80,11 @@ section
   margin: 1em;
   border-width: 2px;
   border-color: black;
+}
+.nopadding
+{
+  padding:0;
+  background-color: transparent;
 }
 .row
 {
@@ -100,6 +112,19 @@ section
 
 }
 
+/*description column*/
+.descol
+{
+  background-color:transparent;
+  padding:5px;
+}
+
+.previewPicture
+{
+  height:200px;
+  display: block;
+  margin: auto;
+}
 .information
 {
   background-color: red;
@@ -126,7 +151,7 @@ a.navbar-brand
 
 li
 {
-  
+
   font-size:20px;
   color:black;
 }
@@ -185,4 +210,32 @@ a.homeLink:hover
 {
   font-size: 42px;
   color: blue;
+}
+.opacityDiv
+{
+  background-color: silver;
+  opacity: 0.8;
+  max-width: 75%;
+  margin: auto;
+}
+
+.btnSpacing
+{
+  margin-bottom: 5px;
+}
+
+.listrow
+{
+  background-color:#89cff0;
+  border-style:solid;
+  border-width:1px;
+  margin-bottom:5px;
+}
+
+.border
+{
+  border-style:dotted;
+  border-width:2px;
+  margin:5px;
+  padding: 15px;
 }
