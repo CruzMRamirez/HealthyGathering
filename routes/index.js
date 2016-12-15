@@ -39,7 +39,7 @@ router.post('/insert', function(req,res,next){
 
 });
 
-//
+//get data
 router.get('/get-data', function(req,res,next){
   UserData.find()
     .then(function(doc){
@@ -134,11 +134,28 @@ router.get('/profile', function(req, res, next) {
   res.render('profile', { title: 'profile' });
 });
 
-router.get('/search', function(req, res, next) {
-  res.render('search', { title: 'search' });
+router.get('/find', function(req, res, next) {
+  UserData.find()
+  .then(function(doc){
+    res.render('find', {items: doc});
+  });
 });
 
 router.get('/login', function(req, res, next) {
   res.render('login', { title: 'login' });
 });
+
+
+
+
+router.post('/searchData', function(req,res,next){
+  var search = req.body.search;
+  UserData.find().or([{name: search}, {content: search}, {store: search}])
+    .then(function(doc){
+      res.render('find', {items: doc});
+    });
+});
+
+
+
 module.exports = router;

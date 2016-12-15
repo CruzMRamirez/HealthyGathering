@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  //- section.find
+  //-  h3 Find Specific
+  //-  form(action="/searchData", method="post")
+  //-    div.input
+  //-      label(for="search") Search
+  //-      input(type="text", id="search", name="search")
+  //-    button(type="submit") SEARCH 
+
+  section.get
+    h3 Get data
+    div
+      .row
+        for item in items
+          .col-md-3
+            article.item
+              div Name: #{item.name}
+              div Content: #{item.content}
+              div Store: #{item.store}

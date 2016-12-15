@@ -1,6 +1,15 @@
 extends layout
   
 block content
+  section.search
+    h3 Search Data
+    form()
+      label(for="name") Product Name:
+      input(type="text", id="name", name="name")
+      button(type="submit") Search
+      
+      
+  br
   section.insert
     h3 Insert Data
     form(action="/insert", method="post")
@@ -53,3 +62,9 @@ block content
             input(type="text", id="store", name="store")
             
           button(type="submit") UPDATE 
+  
+  
+    
+    
+    
+  p nothing
