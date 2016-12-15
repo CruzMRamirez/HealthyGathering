@@ -3,27 +3,73 @@ html
   head
     title= title
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet")
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
     link(rel='stylesheet', href='/stylesheets/style.css')
   script
     $(document).ready(function(){$("#options").click(function(){$("#panel").animate({width:'toggle'},1000);$(".wrapper").toggleClass("wrappertoggle");});});
  
   body
-    nav.navbar.navbar-inverse.navbar-fixed-top(style="background-color:pink;")
-      button.btn.btn-lg(id="options", style="background-color:red; float: left;")
-        h2
-          span.glyphicon.glyphicon-menu-hamburger
-      .inputdiv
-        form
-          input(type="text" name="productsearch") 
-      button.btn.btn-lg(style="background-color:red; float:right;")
-        h2
-          span.glyphicon.glyphicon-search
+
+     #nav.navbar.navbar-default.navbar-fixed-top(style="background-color:#FF3300;")
+       .container
+         .navbar-header
+           button.navbar-toggle.collapsed(style="float:right;" type='button',id="options", data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+             span.sr-only Toggle navigation
+             span.icon-bar
+             span.icon-bar
+             span.icon-bar
+           a.navbar-brand(href='/') Healthy Gathering
+         .navbar-toggle(style="margin:auto; border-color:transparent; float:left;")
+           sectiont.find
+             form(action="/searchData", method="post")
+               div.input
+                 input.bigsearchbar(type="text", id="search", name="search")
+               button(type="submit") SEARCH 
+         #navbar.navbar-collapse.collapse
+           ul.nav.navbar-nav
+             li(class=(title == 'list') ? 'active' : null)
+               a(href='/list', style="color:black;") My List
+           ul.nav.navbar-nav.navbar-right(style="float:left;")
+             if user
+               li.dropdown
+                 a.navbar-avatar.dropdown-toggle(href='#', data-toggle='dropdown')
+                   span #{user.name || user.email} &nbsp;
+                   i.caret
+                 ul.dropdown-menu
+                   li
+                     a(href='/profile') Profile
+                   li.divider(role='separator')
+                   li
+                     a(href='/logout') Logout
+             else
+               li(class=(title == 'Log in') ? 'active' : null)
+                 a(href='/login', style="color:black;") Log-in
+               li(class=(title == 'Register') ? 'active' : null)
+               
+                 a(href='/login') Register
+           form(action="/searchData", method="post")
+             div.input
+               input(type="text", id="search", name="search")
+               button(type="submit") SEARCH 
+
     div(id="panel")
-      p hello world this is my test
+      ul(style="list-style-type:none")
+        li
+          a.homeLink(href="/" data-transition="slide") Home
+        li
+          a.pannelLink(href="/profile") Profile
+        li
+          a.pannelLink(href="/list") List
+        li
+          a.pannelLink(href="/preferences") Preferences
+        li
+          a.pannelLink(href="/contact") Contact
+        li
+          a.pannelLink(href="/about") About
     .wrapper
       block content
     footer.navbar-fixed-bottom
-        p
-        | &copy; 2016 |
-        
+        a.pannelLink(style="font-size:16px;", href='/about') About | 
+        a.pannelLink(style="font-size:16px;", href='/contact') Contact | 
+        | &copy; 2016 
