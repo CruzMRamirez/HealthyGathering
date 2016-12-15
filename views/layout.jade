@@ -20,9 +20,11 @@ html
              span.icon-bar
            a.navbar-brand(href='/') Healthy Gathering
          .navbar-toggle(style="margin:auto; border-color:transparent; float:left;")
-             form
-               input.bigsearchbar(type="text" name="search")
-               input(type="submit" value="Go")
+           sectiont.find
+             form(action="/searchData", method="post")
+               div.input
+                 input.bigsearchbar(type="text", id="search", name="search")
+               button(type="submit") SEARCH 
          #navbar.navbar-collapse.collapse
            ul.nav.navbar-nav
              li(class=(title == 'list') ? 'active' : null)
@@ -44,10 +46,10 @@ html
                  a(href='/login') Log-in
                li(class=(title == 'Register') ? 'active' : null)
                  a(href='/login') Register
-           form
-             input(type="text" name="productsearch")
-             input(type="submit" value="Search")
-
+           form(action="/searchData", method="post")
+             div.input
+               input(type="text", id="search", name="search")
+               button(type="submit") SEARCH 
     div(id="panel")
       ul(style="list-style-type:none")
         li
