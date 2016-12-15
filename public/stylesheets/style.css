@@ -1,6 +1,6 @@
 body{
   padding-top:6%;
-  background-color: white;
+  background-color:white;
 }
 body, html{
   height:100%;
@@ -51,18 +51,18 @@ section
 
 .jumbotron
 {
-  background-color: gray;
+  background-color: #400099;
   height: 30%;
   padding: 10px;
 }
 .slideWrapper
 {
-  background-color: silver;
+  background-color: #FFE500;
   padding: 5%;
 }
 .aboutproduct
 {
-  background-color: yellow;
+  background-color:#FFE500;
   padding: 5%;
 }
 .store
@@ -114,9 +114,22 @@ table,tr,th,td
   border-width:1px;
   border-color:black;
   border-style: solid;
-  padding:2%;
+  padding:5%;
 }
 
+a.navbar-brand
+{
+  font-family: 'Dancing Script', cursive;
+  font-size:30px;
+  color:black !important;
+}
+
+li
+{
+  
+  font-size:20px;
+  color:black;
+}
 
 
 .inputdiv
@@ -124,6 +137,7 @@ table,tr,th,td
   float:left;
   width:75%;
 }
+
 input
 {
 

@@ -3,6 +3,7 @@ html
   head
     title= title
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet")
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
     link(rel='stylesheet', href='/stylesheets/style.css')
   script
@@ -10,7 +11,7 @@ html
  
   body
 
-     #nav.navbar.navbar-default.navbar-fixed-top
+     #nav.navbar.navbar-default.navbar-fixed-top(style="background-color:#FF3300;")
        .container
          .navbar-header
            button.navbar-toggle.collapsed(style="float:right;" type='button',id="options", data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
@@ -26,7 +27,7 @@ html
          #navbar.navbar-collapse.collapse
            ul.nav.navbar-nav
              li(class=(title == 'list') ? 'active' : null)
-               a(href='/list') My List
+               a(href='/list', style="color:black;") My List
            ul.nav.navbar-nav.navbar-right(style="float:left;")
              if user
                li.dropdown
@@ -41,9 +42,9 @@ html
                      a(href='/logout') Logout
              else
                li(class=(title == 'Log in') ? 'active' : null)
-                 a(href='/login') Log-in
+                 a(href='/login', style="color:black;") Log-in
                li(class=(title == 'Register') ? 'active' : null)
-                 a(href='/login') Register
+                 a(href='/login', style="color:black;") Register
            form
              input(type="text" name="productsearch")
              input(type="submit" value="Search")
